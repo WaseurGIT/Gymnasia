@@ -38,33 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="323dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="381dp"
-        android:background="@drawable/rounded_textfield"
-        android:drawableStart="@drawable/message"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:textColorHint="#888888"
-        android:textColor="#000"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.0" />
-
-<!--    <EditText-->
+    <!--    <EditText-->
 <!--        android:id="@+id/editTextTextPassword"-->
 <!--        android:layout_width="318dp"-->
 <!--        android:layout_height="49dp"-->
@@ -90,7 +64,27 @@
 <!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"-->
 <!--        app:layout_constraintVertical_bias="0.256" />-->
 
-    <RelativeLayout
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="323dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/rounded_textfield"
+        android:drawableStart="@drawable/message"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000"
+        android:textColorHint="#888888"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout"
         android:layout_width="318dp"
         android:layout_height="wrap_content"
@@ -117,7 +111,9 @@
             android:paddingEnd="48dp"
             android:textColor="#000"
             android:textColorHint="#888888"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
 
         <ImageView
             android:id="@+id/passwordToggle"
@@ -127,8 +123,11 @@
             android:layout_centerVertical="true"
             android:layout_marginEnd="16dp"
             android:contentDescription="Toggle Password Visibility"
-            android:src="@drawable/show" />
-    </RelativeLayout>
+            android:src="@drawable/show"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <TextView
